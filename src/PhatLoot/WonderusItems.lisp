@@ -1,3 +1,5 @@
+(in-package :treasure-gen)
+
 ;The way we find where everything else is!
 (defvar *lesser-minor-wonderous*
   '(((0 . 5) *lesser-minor-belts*)
@@ -12,7 +14,7 @@
     ((54 . 60) *lesser-minor-shoulder*)
     ((61 . 66) *lesser-minor-wrist*)
     ((67 . 99) *lesser-minor-slotless*)))
-;
+
 (defvar *greater-minor-wonderous*
   '(((0 . 5) *greater-minor-belts*)
     ((6 . 11) *greater-minor-body*)
@@ -83,7 +85,7 @@
     ((54 . 69) "Heavyload belt")
     ((70 . 83) "Aquatic cummerbund")
     ((84 . 99) "Equestrian belt")))
-;
+
 (defvar *greater-minor-belts*
   '(((0 . 17) "Belt of giant strength +2")
     ((18 . 35) "Belt of incredible dexterity +2")
@@ -100,7 +102,7 @@
     ((60 . 69) "Bodywrap of mighty strikes")
     ((70 . 79) "Corset of the vishkanya")
     ((80 . 99) "Druid's vestment")))
-;
+
 (defvar *greater-minor-body*
   '(((0 . 14) "Cassock of the clergy")
     ((15 . 29) "Mnemonic vestment")
@@ -117,7 +119,7 @@
     ((50 . 74) "All tools vest")
     ((75 . 99) "Vest of surgery")))
 
-;
+
 (defvar *greater-minor-chest*
   '(((0 . 9) "Sash of the war champion")
     ((10 . 19) "Sipping jacket")
@@ -138,7 +140,7 @@
     ((58 . 71) "Pirate's eye patch")
     ((72 . 86) "Spectacles of understanding")
     ((87 . 99) "Lenses of detection")))
-;
+
 (defvar *greater-minor-eyes*
   '(((0 . 19) "Eyes of the owl")
     ((20 . 43) "Eyes of keen sight")
@@ -158,7 +160,7 @@
     ((76 . 84) "Acrobat slippers")
     ((85 . 91) "Horseshoes of speed")
     ((92 . 99) "Boots of the mire")))
-;
+
 (defvar *greater-minor-feet*
   '(((0 . 6) "Burglar boots (minor)")
     ((7 . 12) "Horseshoes of crushing blows +1")
@@ -182,7 +184,7 @@
     ((70 . 79) "Gloves of larceny")
     ((80 . 89) "Healer's gloves")
     ((90 . 99) "Engineer's workgloves")))
-;
+
 (defvar *greater-minor-hands*
   '(((0 . 11) "Gauntlets of the skilled maneuver")
     ((12 . 20) "Ghostvision gloves")
@@ -201,7 +203,7 @@
     ((56 . 70) "Buffering cap")
     ((71 . 84) "Miser's mask")
     ((85 . 99) "Stalker's mask")))
-;
+
 (defvar *greater-minor-head*
   '(((0 . 11) "Circlet of pursuasion")
     ((12 . 20) "Grappler's mask")
@@ -215,7 +217,7 @@
 (defvar *lesser-minor-headband*
   '(((0 . 59) "Phylactery of faithfulness")
     ((60 . 99) "Deadman's headband")))
-;
+
 (defvar *greater-minor-headband*
   '(((0 . 8) "Headband of alluring charisma +2")
     ((9 . 17) "Headband of inspired wisdom +2")
@@ -243,7 +245,7 @@
     ((82 . 88) "Swarmbane clasp")
     ((89 . 94) "Mind sentinel medallion")
     ((95 . 99) "Mummer's ruff")))
-;
+
 (defvar *greater-minor-neck*
   '(((0 . 7) "Amulet of elemental strife")
     ((8 . 14) "Righteous fist amulet")
@@ -272,7 +274,7 @@
     ((85 . 93) "Cloak of fangs")
     ((94 . 96) "Pauldrons of the serpent")
     ((97 . 99) "Stonemist cloak")))
-;
+
 (defvar *greater-minor-shoulder*
   '(((0 . 25) "Cloak of resistance +2")
     ((26 . 37) "Cloak of the scuttling rat")
@@ -290,7 +292,7 @@
     ((63 . 90) "Bracers of steadiness")
     ((91 . 95) "Manacles of cooperation")
     ((96 . 99) "Shackles of complaiance")))
-;
+
 (defvar *greater-minor-wrist*
   '(((0 . 26) "Bracers of armor +2")
     (27 "Bracers of falcon's aim")
@@ -364,7 +366,7 @@
     (96 "Noble's vigilant pillbox")
     ((97 . 98) "Figurine of wonderous power (silver raven)")
     (99 "Volatile vaporizer III")))
-;
+
 (defvar *greater-minor-slotless*
   '((0 "Boro bead II")
     (1 "Cautionary creance")

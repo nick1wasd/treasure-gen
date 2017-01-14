@@ -1,18 +1,20 @@
+(in-package :treasure-gen)
+
 (defvar *lesser-minor-weapon*
   '(((0 . 79) "+1 weapon")
     ((80 . 99) *lesser-minor-specific-weapon*)))
-;
+
 (defvar *greater-minor-weapon*
   '(((0 . 25) "+1 weapon")
     ((26 . 52) "+2 weapon")
     ((53 . 79) "+1 one and" *plus-one-weapon*)
     ((80 . 99) *greater-minor-specific-weapon*)))
-;
+
 (defvar *plus-one-weapon*
   '(((0 . 49) *plus-one-melee*)
     ((50 . 74) *plus-one-range*)
     ((75 . 99) *plus-one-ammo*)))
-;
+
 (defvar *plus-one-melee*
   '((0 "Impervious")
     (1 "Glamered")
@@ -58,7 +60,7 @@
     ((91 . 95) "Thundering")
     (96 "Valiant")
     ((98 . 99) "Vicious")))
-;
+
 (defvar *plus-one-range*
   '((0 "Adaptive")
     (1 "Impervious")
@@ -85,7 +87,7 @@
     ((76 . 83) "Seeking")
     ((84 . 91) "Shock")
     ((92 . 99) "Thundering")))
-;
+
 (defvar *plus-one-ammo*
   '(((0 . 4) "Dry load")
     ((5 . 15) "Bane")
@@ -102,7 +104,7 @@
     ((68 . 72) "Seeking")
     ((73 . 85) "Shock")
     ((86 . 99) "Thundering"))))
-;
+
 (defvar *lesser-minor-specific-weapon*
   '(((0 . 1) "Tracer bullet")
     ((2 . 7) "Sleep arrow")
@@ -120,7 +122,7 @@
     ((82 . 83) "Burrowing bullet (lesser)")
     ((84 . 91) "Dust bolt")
     ((92 . 99) "Slaying arrow")))
-;
+
 (defvar *greater-minor-specific-weapon*
   '(((0 . 19) "Adamantine dagger")
     ((20 . 39) "Adamantine battleaxe")

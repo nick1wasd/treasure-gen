@@ -1,3 +1,5 @@
+(in-package :treasure-gen)
+
 (defvar *grade-one-gem*
   '(((0 . 7) "Agate (5 + 2d4) gp")
     ((8 . 13) "Alabaster (5 + 2d4) gp")

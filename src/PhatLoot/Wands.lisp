@@ -1,3 +1,5 @@
+(in-package :treasure-gen)
+
 (defvar *lesser-minor-wand*
   '(((0 . 39) *lvl-zero-wand*)
     ((40 . 99) *lvl-one-wand*)))

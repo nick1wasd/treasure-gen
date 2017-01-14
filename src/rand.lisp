@@ -1,8 +1,3 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; Primitive Statistics
-;; copyright 2015 Justin Patera
-;;
 ;; Random number generators
 
 (in-package :cl-user)
@@ -66,7 +61,3 @@ based on the given mean & standard deviation"
 
 (defun select-rand (&rest lst)
   (nth (random (length lst)) lst))
-
-(defun poisson (prob)
-  (if (<= (uniform-n) prob)
-      t))

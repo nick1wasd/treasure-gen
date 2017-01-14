@@ -1,3 +1,5 @@
+(in-package :treasure-gen)
+
 (defvar *lesser-minor-armor*
   '(((0 . 79) "+1 item")
     ((80 . 99) *lesser-minor-specific-armor-armor*)))

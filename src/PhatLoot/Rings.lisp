@@ -1,3 +1,5 @@
+(in-package :treasure-gen)
+
 (defvar *lesser-minor-ring*
   '(((0 . 6) "Prisoner's dungeon ring")
     ((7 . 15) "Ring of arcane signets")

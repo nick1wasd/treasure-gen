@@ -1,3 +1,5 @@
+(in-package :treasure-gen)
+
 (defvar *lesser-minor-potion*
   '(((0 . 39) *lvl-zero-potion*)
     ((40 . 99) *lvl-one-potion*)))

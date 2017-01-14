@@ -1,14 +1,16 @@
+(in-package :treasure-gen)
+
 (defvar *lesser-minor-scroll*
   '(((0 . 14) *lvl-zero-scroll*)
     ((15 . 94) *lvl-one-scroll*)
     ((95 . 99) *lvl-two-scroll*)))
-;
+
 (defvar *greater-minor-scroll*
   '(((0 . 4) *lvl-zero-scroll*)
     ((5 . 34) *lvl-one-scroll*)
     ((35 . 89) *lvl-two-scroll*)
     ((90 . 99) *lvl-three-scroll*)))
-;
+
 (defvar *lvl-zero-scroll*
   '(((0 . 44) *CA-lvl-zero-scroll*)
     ((45 . 59) *UA-lvl-zero-scroll*)
@@ -194,7 +196,7 @@
     ((91 . 94) "Touch of the sea")
     ((95 . 97) "Bless water")
     ((98 . 99) "Curse water")))
-;
+
 (defvar *lvl-two-scroll*
   '(((0 . 44) *CA-lvl-two-scroll*)
     ((45 . 59) *UA-lvl-two-scroll*)
@@ -344,7 +346,7 @@
     ((95 . 96) "Desecrate")
     ((97 . 98) "Fire trap")
     (99 "Masterwork transformation")))
-;
+
 (defvar *lvl-three-scroll*
   '(((0 . 44) *CA-lvl-three-scroll*)
     ((45 . 59) *UA-lvl-three-scroll*)
