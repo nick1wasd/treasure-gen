@@ -3,9 +3,9 @@
 
 (in-package :cl-user)
 
-(defpackage :treasure-gen
-  (:nicknames #:tg)
+(defpackage :treasure-gen-test
   (:use :common-lisp
-        :cl-user)
+        :cl-user
+        :lisp-unit)
   (:export
-    #:generate-item))
+    ))

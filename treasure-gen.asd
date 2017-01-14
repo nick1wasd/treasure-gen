@@ -8,7 +8,7 @@
 (defsystem :treasure-gen
   :description "Treasure Generator of Awesome!!!"
   :depends-on
-    (:cl-ppcre)
+    ()
   :pathname "src"
   :serial t
   :components

@@ -3,6 +3,7 @@
 (in-package :cl-user)
 
 (defpackage :random-z
+  (:nicknames #:rn)
   (:use :common-lisp
         :cl-user)
   (:export
