@@ -14,9 +14,9 @@
 
 (define-test bounds-checking
   (assert-equal '("+1 weapon")
-    (tg::get-item-num tg::*lesser-minor-weapon* 1))
-  (assert-equal '("+1 weapon")
     (tg::get-item-num tg::*lesser-minor-weapon* 0))
+  (assert-equal '("+1 weapon")
+    (tg::get-item-num tg::*lesser-minor-weapon* 1))
   (assert-equal tg::*lesser-minor-specific-weapon*
     (tg::get-item-num tg::*lesser-minor-weapon* 98))
   (assert-equal tg::*lesser-minor-specific-weapon*

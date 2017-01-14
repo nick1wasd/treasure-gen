@@ -18,10 +18,11 @@
 
 (defun generate-item (itm-list)
   (let ((item (random-item itm-list)))
-    (format nil "~{~A ~}"
-      (mapcar
-        (lambda (i)
-          (if (stringp i)
-              i
-              (generate-item i)))
-        item))))
+    (string-trim
+      (format nil "~{~A ~}"
+        (mapcar
+          (lambda (i)
+            (if (stringp i)
+                i
+                (generate-item i)))
+          item)))))
