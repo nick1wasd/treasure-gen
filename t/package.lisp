@@ -6,6 +6,7 @@
 (defpackage :treasure-gen-test
   (:use :common-lisp
         :cl-user
-        :lisp-unit)
+        :lisp-unit
+        :treasure-gen)
   (:export
     ))
