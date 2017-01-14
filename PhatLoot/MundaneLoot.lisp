@@ -1,0 +1,1 @@
+(defvar *least-minor-gems*)
