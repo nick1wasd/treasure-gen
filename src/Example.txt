@@ -1,0 +1,6 @@
+(defmethod *name* ((name type) (name type))
+  *blah name name*)
+(defmethod *name* ((name other-type) (name other-type))
+  *other-blah name name*)
+(ql:qucikload :treasure-gen)
+(in-package :treasure-gen)

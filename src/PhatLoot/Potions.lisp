@@ -12,7 +12,7 @@
 (defvar *lesser-medium-potion*
   '(((0 . 24) *lvl-one-potion*)
     ((25 . 84) *lvl-two-potion*)
-    ((85 . 99) *lvl-three-potion*))')
+    ((85 . 99) *lvl-three-potion*)))
 ;
 (defvar *greater-medium-potion*
   '(((0 . 9) *lvl-one-potion*)

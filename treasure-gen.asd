@@ -17,14 +17,13 @@
        :pathname "PhatLoot"
        :components
        ((:file "Armor")
-        (:file "GemsArt")
         (:file "Loot")
         (:file "MundaneLoot")
-        ;(:file "Potions") ;; doesn't work
-        ;(:file "Rings") ;; doesn't work
-        ;(:file "Scrolls") ;; doesn't work
+        (:file "Potions") ;; doesn't work
+        (:file "Rings") ;; doesn't work
+        (:file "Scrolls") ;; doesn't work
         (:file "Wands")
         (:file "Weapons")
-        (:file "WonderusItems")))
+        (:file "WonderousItems")))
      (:file "rand")
      (:file "gen-loot")))

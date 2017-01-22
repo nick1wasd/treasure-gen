@@ -3,23 +3,97 @@
 (defvar *lesser-minor-weapon*
   '(((0 . 79) "+1 weapon")
     ((80 . 99) *lesser-minor-specific-weapon*)))
-
+;
 (defvar *greater-minor-weapon*
   '(((0 . 25) "+1 weapon")
     ((26 . 52) "+2 weapon")
     ((53 . 79) "+1 one and" *plus-one-weapon*)
     ((80 . 99) *greater-minor-specific-weapon*)))
+;
+(defvar *lesser-medium-weapon*
+  '(((0 . 9) "+1 weapon")
+    ((10 . 19) "+2 weapon")
+    ((20 . 31) "+3 weapon")
+    ((32 . 43) "+1 weapon and " *plus-one-weapon*)
+    ((44 . 55) "+1 weapon and " (2 . *plus-one-weapon*))
+    ((56 . 67) "+1 weapon and " *plus-two-weapon*)
+    ((68 . 79) "+2 weapon and " *plus-one-weapon*)
+    ((80 . 99) *lesser-medium-specific-weapon*)))
+
+(defvar *greater-medium-weapon*
+  '(((0 . 9) "+2 weapon")
+    ((10 . 21) "+3 weapon")
+    ((22 . 31) "+1 weapon and " *plus-one-weapon*)
+    ((32 . 43) "+1 weapon and " *plus-two-weapon*)
+    ((44 . 55) "+2 weapon and " *plus-one-weapon*)
+    ((56 . 67) "+2 weapon and " *plus-two-weapon*)
+    ((68 . 79) "+3 weapon and " *plus-one-weapon*)
+    ((80 . 99) *greater-medium-specific-weapon*)))
+
+(defvar *lesser-major-weapon*
+  '(((0 . 9) "+3 weapon")
+    ((10 . 21) "+4 weapon")
+    ((22 . 31) "+1 weapon and " *plus-two-weapon*)
+    ((32 . 43) "+1 weapon and " *plus-three-weapon*)
+    ((44 . 55) "+2 weapon and " *plus-two-weapon*)
+    ((56 . 67) "+3 weapon and " *plus-one-weapon*)
+    ((68 . 79) "+4 weapon and " *plus-one-weapon*)
+    ((80 . 99) *lesser-major-specific-weapon*)))
+
+(defvar *greater-major-weapon*
+  '(((0 . 9) "+4 weapon")
+    ((10 . 19) "+5 weapon")
+    ((20 . 29) "+4 weapon and " *plus-one-weapon*)
+    ((30 . 37) "+4 weapon and " *plus-two-weapon*)
+    ((38 . 45) "+4 weapon and " *plus-three-weapon*)
+    ((46 . 50) "+4 weapon and " *plus-four-weapon*)
+    ((51 . 58) "+5 weapon and " *plus-one-weapon*)
+    ((59 . 66) "+5 weapon and " *plus-two-weapon*)
+    ((67 . 70) "+5 weapon and " *plus-three-weapon*)
+    ((71 . 73) "+5 weapon and " *plus-four-weapon*)
+    ((74 . 76) "+5 weapon and " (*plus-four-weapon* . *plus-one-weapon*))
+    ((77 . 79) "+5 weapon and " (*plus-three-weapon* . *plus-two-weapon*))
+    ((80 . 99) *greater-major-specific-weapon*)))
 
 (defvar *plus-one-weapon*
   '(((0 . 49) *plus-one-melee*)
     ((50 . 74) *plus-one-range*)
     ((75 . 99) *plus-one-ammo*)))
+;
+(defvar *plus-two-weapon*
+  '(((0 . 49) *plus-two-melee*)
+    ((50 . 74) *plus-two-range*)
+    ((75 . 99) *plus-two-ammo*)))
+
+(defvar *plus-three-weapon-weapon*
+  '(((0 . 49) *plus-three-melee*)
+    ((50 . 99) *plus-three-range*)))
+
+(defvar *plus-four-weapon*
+  '(((0 . 49) *plus-four-melee*)
+    ((50 . 74) *plus-three-range*)
+    ((75 . 99) *plus-four-ammo*)))
+
+(defvar *bane-effect*
+  '(((0 . 4) "Aberrations")
+    ((5 . 8) "Animals")
+    ((9 . 15) "Constructs")
+    ((16 . 21) "Dragons")
+    ((22 . 26) "Fey")
+    ((27 . 59) "Humanoid (GM's pick for subtype)")
+    ((60 . 64) "Magical beasts")
+    ((65 . 69) "Monsterous humanoids")
+    ((70 . 71) "Ooze")
+    ((72 . 87) "Outsider (GM's pick for subtype)")
+    ((88 . 89) "Plants")
+    ((90 . 97) "Undead")
+    ((98 . 99) "Vermin")))
 
 (defvar *plus-one-melee*
   '((0 "Impervious")
     (1 "Glamered")
     (2 "Allying")
-    ((3 . 7) "Bane")
+    ((3 . 7) "Bane: " *bane-effect*)
     (8 "Benevolent")
     (9 "Called")
     ((10 . 11) "Conductive")
@@ -60,13 +134,52 @@
     ((91 . 95) "Thundering")
     (96 "Valiant")
     ((98 . 99) "Vicious")))
+;
+(defvar *plus-two-melee*
+  '((0 "Advancing")
+    ((1 . 9) "Anarchic")
+    ((10 . 18) "Anchoring")
+    (19 "Axiomatic")
+    ((20 . 26) "Corrosive burst")
+    (27 "Defiant")
+    (28 "Dispelling burst")
+    ((29 . 37) "Disruption")
+    ((38 . 46) "Flaming burst")
+    (47 "Furyborn")
+    (48 "Glorious")
+    ((49 . 57) "Holy")
+    ((58 . 66) "Ivy burst")
+    (67 "Igniting")
+    (68 "Impact")
+    (69 "Invigorating")
+    (70 "Ki intensifying")
+    (71 "Lifesurge")
+    (72 "Negating")
+    (73 "Phase locking")
+    ((74 . 82) "Shocking burst")
+    (83 "Stalking")
+    ((84 . 90) "Unholy")
+    ((91 . 99) "Wounding")))
+
+(defvar *plus-three-melee*
+  '(((0 . 19) "Nullifying")
+    ((20 . 39) "Repositioning")
+    ((40 . 79) "Speed")
+    ((80 . 99) "Spellstealing")))
+
+(defvar *plus-four-melee*
+  '(((0 . 39) "Brilliant energy")
+    ((40 . 79) "Dancing")
+    ((80 . 89) "Vorpal")
+    ((90 . 94) "Transformative")
+    ((95 . 99) "Dueling")))
 
 (defvar *plus-one-range*
   '((0 "Adaptive")
     (1 "Impervious")
     (2 "Glamered")
     ((3 . 5) "Allying")
-    ((6 . 14) "Bane")
+    ((6 . 14) "Bane: " *bane-effect*)
     (15 "Called")
     ((16 . 18) "Conductive")
     (19 "Conserving")
@@ -88,9 +201,34 @@
     ((84 . 91) "Shock")
     ((92 . 99) "Thundering")))
 
+(defvar *plus-two-range*
+  '(((0 . 9) "Anarchic")
+    ((10 . 12) "Anchoring")
+    ((13 . 22) "Axiomatic")
+    ((23 . 30) "Corrosive burst")
+    ((31 . 33) "Designating (lesser)")
+    ((34 . 36) "Endless ammo")
+    ((37 . 47) "Flaming burst")
+    ((48 . 57) "Holy")
+    ((58 . 68) "Icy burst")
+    ((69 . 72) "Igniting")
+    ((73 . 75) "Phase locking")
+    ((76 . 85) "Shocking burst")
+    ((86 . 89) "Stalking")
+    ((90 . 99) "Unholy")))
+
+(defvar *plus-three-range*
+  '(((0 . 24) "Lucky (greater)")
+    ((25 . 44) "Reliable (greater)")
+    ((45 . 84) "Speed")
+    ((85 . 93) "Brilliant energy")
+    ((94 . 95) "Designating (greater)")
+    ((96 . 97) "Nimble shot")
+    ((98 . 99) "Second chance")))
+
 (defvar *plus-one-ammo*
   '(((0 . 4) "Dry load")
-    ((5 . 15) "Bane")
+    ((5 . 15) "Bane: " *bane-effect*)
     (16 "Conductive")
     ((17 . 27) "Corrosive")
     (28 "Cruel")
@@ -104,6 +242,23 @@
     ((68 . 72) "Seeking")
     ((73 . 85) "Shock")
     ((86 . 99) "Thundering"))))
+;
+(defvar *plus-two-ammo*
+  '(((0 . 9) "Anarchic")
+    ((10 . 19) "Axiomatic")
+    ((20 . 29) "Corrosive burst")
+    ((30 . 32) "Designating (lesser)")
+    ((33 . 44) "Flaming burst")
+    ((45 . 54) "Holy")
+    ((55 . 66) "Icy burst")
+    ((67 . 69) "Igniting")
+    ((70 . 79) "Phase locking")
+    ((80 . 89) "Shocking burst")
+    ((90 . 99) "Unholy")))
+
+(defvar *plus-four-ammo*
+  '(((0 . 65) "Brilliant energy")
+    ((66 . 99) "Designating (greater)")))
 
 (defvar *lesser-minor-specific-weapon*
   '(((0 . 1) "Tracer bullet")
@@ -122,7 +277,7 @@
     ((82 . 83) "Burrowing bullet (lesser)")
     ((84 . 91) "Dust bolt")
     ((92 . 99) "Slaying arrow")))
-
+;
 (defvar *greater-minor-specific-weapon*
   '(((0 . 19) "Adamantine dagger")
     ((20 . 39) "Adamantine battleaxe")
@@ -130,3 +285,82 @@
     ((50 . 69) "Slaying arrow (greater)")
     ((70 . 79) "Lance of jousting")
     ((80 . 99) "Shatterspike")))
+
+(defvar *lesser-medium-specific-weapon*
+  '(((0 . 2) "Bloodletting kukri")
+    ((3 . 8) "Boulderhead mace")
+    ((9 . 13) "Beaststrike club")
+    ((14 . 19) "Fighter’s fork")
+    ((20 . 22) "Everflowing aspergillum")
+    ((23 . 27) "Hurricane quarterstaff")
+    ((28 . 33) "Dagger of venom")
+    ((34 . 38) "Gloom blade")
+    ((39 . 43) "Frostbite sling")
+    ((44 . 48) "Trident of stability")
+    ((49 . 53) "Trident of warning")
+    ((54 . 59) "Assassin’s dagger")
+    ((60 . 65) "Dagger of doubling")
+    ((66 . 70) "Earthenflail")
+    ((71 . 78) "Swift obsidian greataxe")
+    ((79 . 84) "Polarity hammer")
+    ((85 . 92) "Blade of binding")
+    ((93 . 99) "Shifter’s sorrow")))
+
+(defvar *greater-medium-specific-weapon*
+  '(((0 . 6) "Dragoncatch guisarme")
+    ((7 . 14) "Ten-ring sword")
+    ((15 . 20) "Triton’s trident")
+    ((21 . 28) "Mace of smiting (lesser)")
+    ((29 . 36) "Disarming blade")
+    ((37 . 41) "Lash of the howler")
+    ((42 . 46) "Shieldsplitter lance")
+    ((47 . 52) "Trident of fish command")
+    ((53 . 58) "Quarterstaff of vaulting")
+    ((59 . 64) "Firedrake pistol")
+    ((65 . 70) "Ricochet hammer")
+    ((71 . 76) "Flame tongue")
+    ((77 . 84) "Sparkwake starknife")
+    ((85 . 89) "Luck blade (0 wishes)")
+    ((90 . 94) "Sword of subtlety")
+    ((95 . 99) "Sword of the planes")))
+
+(defvar *lesser-major-specific-weapon*
+  '(((0 . 11) "Nine lives stealer")
+    ((12 . 25) "Undercutting axe")
+    ((26 . 39) "Spirit caller")
+    ((40 . 54) "Dwarfbond hammer")
+    ((55 . 69) "Oathbow")
+    ((70 . 84) "Sword of life stealing")
+    ((85 . 99) "Cutthroat’s apprentice")))
+
+(defvar *greater-major-specific-weapon*
+  '(((0 . 1) "Ghoul’s lament")
+    ((2 . 4) "Mace of terror")
+    ((5 . 6) "Hellscourge")
+    ((7 . 8) "Dragon’s doom")
+    ((9 . 12) "Life-drinker")
+    ((13 . 15) "Valor’s minion")
+    ((16 . 17) "Summoner’s sorrow")
+    ((18 . 20) "Sylvan scimitar")
+    ((21 . 22) "Spirit blade")
+    ((23 . 25) "Heartswood spear")
+    ((26 . 28) "Rapier of puncturing")
+    ((29 . 31) "Sun blade")
+    ((32 . 36) "Blade of the rising sun")
+    ((37 . 39) "Frost brand")
+    ((40 . 44) "Dwarven thrower")
+    ((45 . 49) "Bloodthirst dagger")
+    ((50 . 52) "Warbringer")
+    ((53 . 56) "Luck blade (1 wish)")
+    ((57 . 60) "Guarding blade")
+    ((61 . 63) "Pistol of the infinite sky")
+    ((64 . 68) "Mace of smiting")
+    ((69 . 72) "Blade of the sword-saint")
+    ((73 . 75) "Scimitar of the spellthief")
+    ((76 . 78) "Spider's fang")
+    ((79 . 81) "Demonsorrow curve blade")
+    ((82 . 84) "Void scythe")
+    ((85 . 88) "Luck blade (2 wishes)")
+    ((89 . 91) "Holy avenger")
+    ((92 . 95) "Bastard’s sting")
+    ((96 . 99) "Luck blade (3 wishes)")))

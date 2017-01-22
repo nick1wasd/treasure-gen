@@ -749,6 +749,24 @@
     ((90 . 98) "Bracers of armor +4")
     (99  "Shackles of durance vile")))
 
+(defvar *greater-medium-wrist*
+  '(((0 . 9) "Vambraces of the genie (djinni)")
+    ((10 . 19) "Vambraces of the genie (marid)")
+    ((20 . 29) "Vambraces of the genie (shaitan)")
+    ((30 . 49) "Bracelet of friends")
+    ((50 . 69) "Bracers of archery (greater)")
+    ((70 . 89) "Bracers of armor +5")
+    ((90 . 99) "Bracers of sworn vengeance")))
+
+(defvar *lesser-major-wrist*
+  '(((0 . 29) "Dimensional shackles")
+    ((30 . 44) "Gauntlets of skill at arms")
+    ((45 . 99) "Bracers of armor +6")))
+
+(defvar *greater-major-wrist*
+  '(((0 . 59) "Bracers of armor +7")
+    ((60 . 99) "Bracers of armor +8")))
+
 ;Misc, either it can't be worn, or doesn't mess with other stuff when it is
 
 (defvar *lesser-minor-slotless*
@@ -814,12 +832,12 @@
     (99 "Volatile vaporizer III")))
 ;
 (defvar *greater-minor-slotless*
-  '((0 "Boro bead II")
-    (1 "Cautionary creance")
-    (2 "Escape ladder")
-    (3 "Far-reaching sight")
+  '(((0) "Boro bead II")
+    ((1) "Cautionary creance")
+    ((2) "Escape ladder")
+    ((3) "Far-reaching sight")
     ((4 . 5) "Ioun stone (clear spindle)")
-    (6 "Marvelous pigments")
+    ((6) "Marvelous pigments")
     ((7 . 14) "Page of spell knowledge II")
     ((15 . 24) "Pearl of power II")
     (25 "Preserving flask II")
