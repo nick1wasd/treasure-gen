@@ -21,18 +21,18 @@
     (select (car itm-list) (cdr itm-list))))
 
 (defun loot-finder (itm-list)
-  (let ((thing (random-item itm-list)))
-    (if (stringp (car thing))
-      (cdr thing)
-      (random-item (symbol-value (car thing))))))
+  (let ((loot (random-item itm-list)))
+    (if (stringp (car loot))
+      (car loot)
+      (loot-finder (symbol-value (car loot))))))
 
 (defun generate-item (itm-list)
-  (let ((item (loot-finder itm-list)))
+  (let ((item (random-item itm-list)))
     (string-trim '(#\NewLine)
       (format nil "~{~A ~}"
         (mapcar
           (lambda (i)
-            (if (stringp (car i))
+            (if (stringp i)
                 i
-                (generate-item (car i))))
+                (generate-item i)))
           item)))))

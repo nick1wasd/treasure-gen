@@ -1,19 +1,19 @@
 (in-package :treasure-gen)
 
 (defvar *lesser-minor-weapon*
-  '(((0 . 79) "+1 weapon")
+  '(((0 . 79) "+1 weapon ")
     ((80 . 99) *lesser-minor-specific-weapon*)))
 ;
 (defvar *greater-minor-weapon*
-  '(((0 . 25) "+1 weapon")
-    ((26 . 52) "+2 weapon")
-    ((53 . 79) "+1 one and" *plus-one-weapon*)
+  '(((0 . 25) "+1 weapon ")
+    ((26 . 52) "+2 weapon ")
+    ((53 . 79) "+1 one and " *plus-one-weapon*)
     ((80 . 99) *greater-minor-specific-weapon*)))
 ;
 (defvar *lesser-medium-weapon*
-  '(((0 . 9) "+1 weapon")
-    ((10 . 19) "+2 weapon")
-    ((20 . 31) "+3 weapon")
+  '(((0 . 9) "+1 weapon ")
+    ((10 . 19) "+2 weapon ")
+    ((20 . 31) "+3 weapon ")
     ((32 . 43) "+1 weapon and " *plus-one-weapon*)
     ((44 . 55) "+1 weapon and " (2 . *plus-one-weapon*))
     ((56 . 67) "+1 weapon and " *plus-two-weapon*)
@@ -21,8 +21,8 @@
     ((80 . 99) *lesser-medium-specific-weapon*)))
 
 (defvar *greater-medium-weapon*
-  '(((0 . 9) "+2 weapon")
-    ((10 . 21) "+3 weapon")
+  '(((0 . 9) "+2 weapon ")
+    ((10 . 21) "+3 weapon ")
     ((22 . 31) "+1 weapon and " *plus-one-weapon*)
     ((32 . 43) "+1 weapon and " *plus-two-weapon*)
     ((44 . 55) "+2 weapon and " *plus-one-weapon*)
@@ -31,8 +31,8 @@
     ((80 . 99) *greater-medium-specific-weapon*)))
 
 (defvar *lesser-major-weapon*
-  '(((0 . 9) "+3 weapon")
-    ((10 . 21) "+4 weapon")
+  '(((0 . 9) "+3 weapon ")
+    ((10 . 21) "+4 weapon ")
     ((22 . 31) "+1 weapon and " *plus-two-weapon*)
     ((32 . 43) "+1 weapon and " *plus-three-weapon*)
     ((44 . 55) "+2 weapon and " *plus-two-weapon*)
@@ -41,8 +41,8 @@
     ((80 . 99) *lesser-major-specific-weapon*)))
 
 (defvar *greater-major-weapon*
-  '(((0 . 9) "+4 weapon")
-    ((10 . 19) "+5 weapon")
+  '(((0 . 9) "+4 weapon ")
+    ((10 . 19) "+5 weapon ")
     ((20 . 29) "+4 weapon and " *plus-one-weapon*)
     ((30 . 37) "+4 weapon and " *plus-two-weapon*)
     ((38 . 45) "+4 weapon and " *plus-three-weapon*)

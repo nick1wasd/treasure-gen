@@ -1,8 +1,8 @@
 (in-package :treasure-gen)
 
 (defvar *lesser-minor-armor*
-  '(((0 . 79) "+1 item")
-    ((80 . 99) *lesser-minor-specific-armor-armor*)))
+  '(((0 . 79) "+1 armor ")
+    ((80 . 99) *lesser-minor-specific-armor*)))
 ;
 (defvar *greater-minor-armor*
   '(((0 . 25) "+1 armor")
@@ -28,13 +28,13 @@
     ((44 . 55) "+2 armor and " *plus-one-armor*)
     ((56 . 67) "+2 armor and " *plus-two-armor*)
     ((68 . 79) "+3 armor and" *plus-one-armor*)
-    ((80 . 99) *greater-medium-specific-armor)))
+    ((80 . 99) *greater-medium-specific-armor*)))
 
 (defvar *lesser-major-armor*
   '(((0 . 9) "+3 armor")
     ((10 . 21) "+4 armor")
     ((22 . 31) "+1 armor and " *plus-two-armor*)
-    ((32 . 43) "+1 armor and " *plus-three-armor)
+    ((32 . 43) "+1 armor and " *plus-three-armor*)
     ((44 . 55) "+2 armor and " *plus-two-armor*)
     ((56 . 67) "+3 armor and " *plus-one-armor*)
     ((68 . 79) "+4 armor and " *plus-one-armor*)
@@ -46,7 +46,7 @@
     ((30 . 29) "+4 armor and " *plus-one-armor*)
     ((30 . 37) "+4 armor and " *plus-two-armor*)
     ((38 . 45) "+4 armor and " *plus-three-armor*)
-    ((46 . 50) "+4 armor and " *plus-four-armor)
+    ((46 . 50) "+4 armor and " *plus-four-armor*)
     ((51 . 58) "+5 armor and " *plus-one-armor*)
     ((59 . 66) "+5 armor and " *plus-two-armor*)
     ((67 . 70) "+5 armor and " *plus-three-armor*)
@@ -83,13 +83,13 @@
     ((44 . 55) "+2 shield and " *plus-one-shield*)
     ((56 . 67) "+2 shield and " *plus-two-shield*)
     ((68 . 79) "+3 shield and" *plus-one-shield*)
-    ((80 . 99) *greater-medium-specific-shield)))
+    ((80 . 99) *greater-medium-specific-shield*)))
 
 (defvar *lesser-major-shield*
   '(((0 . 9) "+3 shield")
     ((10 . 21) "+4 shield")
     ((22 . 31) "+1 shield and " *plus-two-shield*)
-    ((32 . 43) "+1 shield and " *plus-three-shield)
+    ((32 . 43) "+1 shield and " *plus-three-shield*)
     ((44 . 55) "+2 shield and " *plus-two-shield*)
     ((56 . 67) "+3 shield and " *plus-one-shield*)
     ((68 . 79) "+4 shield and " *plus-one-shield*)
@@ -101,7 +101,7 @@
     ((30 . 29) "+4 shield and " *plus-one-shield*)
     ((30 . 37) "+4 shield and " *plus-two-shield*)
     ((38 . 45) "+4 shield and " *plus-three-shield*)
-    ((46 . 50) "+4 shield and " *plus-four-shield)
+    ((46 . 50) "+4 shield and " *plus-four-shield*)
     ((51 . 58) "+5 shield and " *plus-one-shield*)
     ((59 . 66) "+5 shield and " *plus-two-shield*)
     ((67 . 70) "+5 shield and " *plus-three-shield*)
@@ -111,11 +111,11 @@
     ((80 . 99) *greater-major-specific-shield*)))
 
 (defvar *lesser-minor-protect*
-  '(((0 . 49) *lesser-minor-armor)
-    ((50 . 99) *lesser-minor-shield)))
+  '(((0 . 49) *lesser-minor-armor*)
+    ((50 . 99) *lesser-minor-shield*)))
 
 (defvar *greater-minor-protect*
-  '(((0 . 49) *greater-minor-armor)
+  '(((0 . 49) *greater-minor-armor*)
     ((50 . 99) *greater-minor-shield*)))
 
 (defvar *lesser-medium-protect*
@@ -123,7 +123,7 @@
     ((50 . 99) *lesser-medium-shield*)))
 
 (defvar *greater-medium-protect*
-  '(((0 . 49) *greater-medium-armor)
+  '(((0 . 49) *greater-medium-armor*)
     ((50 . 99) *greater-medium-shield*)))
 
 (defvar *lesser-major-protect*
