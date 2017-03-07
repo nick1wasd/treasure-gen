@@ -27,12 +27,25 @@
       (loot-finder (symbol-value (car loot))))))
 
 (defun generate-item (itm-list)
-  (let ((item (random-item itm-list)))
+  (let ((item (loot-finder itm-list)))
     (string-trim '(#\NewLine)
       (format nil "~{~A ~}"
         (mapcar
           (lambda (i)
             (if (stringp i)
                 i
-                (generate-item i)))
+                (loot-finder i)))
           item)))))
+
+(defun grand-table (itm-list value)
+  (labels ((select (current rest)
+    (let ((worth (car current)))
+      (if (= value worth)
+        (typecase (cadr current)
+          (string (if (symbolp (caddr current))
+                    (format t "~a ~a" (cadr current)
+                      (loot-finder (symbol-value (caddr current))))
+                    (write (cadr current))))
+          (symbol (loot-finder (symbol-value (cadr current)))))
+        (select (car rest) (cdr rest))))))
+    (select (car itm-list) (cdr itm-list))))
